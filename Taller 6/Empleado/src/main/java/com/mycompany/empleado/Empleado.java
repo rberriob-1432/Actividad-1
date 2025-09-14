@@ -30,23 +30,19 @@ class Gerente extends Empleado{
     public String getDepartamento(){
         return departamento;
     }
-    void innformacion(){
+    @Override
+    void informacion(){
         System.out.println("El nombre es: "+ nombre);
         System.out.println("El salario es: "+ salario);
         System.out.println("El departamento es: "+departamento);
     }
-    
-    class main{
-    public static void main(String[] args) {
-       Scanner scan=new Scanner(System.in);
-        System.out.println("¿Eres empleado o gerente?");
-        String respuesta=scan.nextLine();
-        if(respuesta.equals("Empleado")||respuesta.equals("E")||respuesta.equals("e")){
-            
-        }
-       
-    }
-    }
-    
-    
+     
 }
+class main{
+    public static void main(String[] args) {
+      Empleado e1= new Empleado("Raul",3000);
+        Gerente g1= new Gerente("Alonso",4000,"Comercio");
+       e1.informacion();
+        g1.informacion();
+    }
+    }
