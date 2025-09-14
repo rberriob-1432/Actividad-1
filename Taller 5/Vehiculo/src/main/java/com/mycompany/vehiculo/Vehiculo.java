@@ -5,6 +5,4 @@ public void Informacion(){
     System.out.println("Marca: "+marca);
 }
 }
-class Moto extends Vehiculo{
-    
-}
+
